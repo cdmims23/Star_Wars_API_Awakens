@@ -9,7 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    // Button Outlets
+    @IBOutlet weak var characterButton: UIButton!
+    @IBOutlet weak var vehicleButton: UIButton!
+    @IBOutlet weak var starshipButton: UIButton!
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

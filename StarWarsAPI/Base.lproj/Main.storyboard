@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StarWarsAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,95 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KnU-To-Tno">
+                                <rect key="frame" x="110" y="28" width="154" height="100"/>
+                                <state key="normal" image="icon-characters-2"/>
+                                <connections>
+                                    <segue destination="9xI-k4-XVb" kind="show" identifier="showInfo" id="ty9-V3-VEN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7A-Tn-ly7">
+                                <rect key="frame" x="110" y="244" width="154" height="100"/>
+                                <state key="normal" image="icon-vehicles"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Leq-lF-Cwi">
+                                <rect key="frame" x="110" y="460" width="154" height="100"/>
+                                <state key="normal" image="icon-starships"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIf-bH-SWb">
+                                <rect key="frame" x="135" y="136" width="104" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starships" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcA-K2-d8l">
+                                <rect key="frame" x="143" y="568" width="89" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0h-Yk-NU3">
+                                <rect key="frame" x="147" y="352" width="80" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Leq-lF-Cwi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="94" id="5ee-fx-HDs"/>
+                            <constraint firstItem="J7A-Tn-ly7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="94" id="6MS-DG-BR6"/>
+                            <constraint firstItem="KnU-To-Tno" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="94" id="6qS-Hg-LKL"/>
+                            <constraint firstItem="i0h-Yk-NU3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="131" id="8aa-Tq-Utw"/>
+                            <constraint firstItem="xIf-bH-SWb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="119" id="9nh-7I-RMN"/>
+                            <constraint firstItem="J7A-Tn-ly7" firstAttribute="top" secondItem="xIf-bH-SWb" secondAttribute="bottom" constant="84" id="Bzh-wz-z8P"/>
+                            <constraint firstItem="Leq-lF-Cwi" firstAttribute="top" secondItem="i0h-Yk-NU3" secondAttribute="bottom" constant="84" id="CDy-lE-NKb"/>
+                            <constraint firstItem="i0h-Yk-NU3" firstAttribute="top" secondItem="J7A-Tn-ly7" secondAttribute="bottom" constant="8" id="EJB-yl-k74"/>
+                            <constraint firstItem="xIf-bH-SWb" firstAttribute="top" secondItem="KnU-To-Tno" secondAttribute="bottom" constant="8" id="HJA-RW-91a"/>
+                            <constraint firstItem="WcA-K2-d8l" firstAttribute="top" secondItem="Leq-lF-Cwi" secondAttribute="bottom" constant="8" id="KXL-z1-E2g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WcA-K2-d8l" secondAttribute="trailing" constant="127" id="X2J-EP-VQh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J7A-Tn-ly7" secondAttribute="trailing" constant="95" id="Xky-QP-p1b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KnU-To-Tno" secondAttribute="trailing" constant="95" id="c2y-J6-YBW"/>
+                            <constraint firstItem="WcA-K2-d8l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="127" id="ehM-ej-R6D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xIf-bH-SWb" secondAttribute="trailing" constant="120" id="eyF-PD-BkE"/>
+                            <constraint firstItem="KnU-To-Tno" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ntp-Wd-UQm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Leq-lF-Cwi" secondAttribute="trailing" constant="95" id="urg-W1-fGJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i0h-Yk-NU3" secondAttribute="trailing" constant="132" id="yol-hl-tRC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="characterButton" destination="KnU-To-Tno" id="0x8-Ra-AdM"/>
+                        <outlet property="starshipButton" destination="Leq-lF-Cwi" id="Zq1-oW-7Aj"/>
+                        <outlet property="vehicleButton" destination="J7A-Tn-ly7" id="1bF-im-1Cr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-110" y="36"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="fWl-FW-fKY">
+            <objects>
+                <viewController id="9xI-k4-XVb" customClass="InfoViewController" customModule="StarWarsAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wbO-lc-xse"/>
+                        <viewControllerLayoutGuide type="bottom" id="yaF-fX-Dqr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XHK-Oj-Wsc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vY6-eR-f7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="36"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-characters-2" width="100" height="100"/>
+        <image name="icon-starships" width="100" height="100"/>
+        <image name="icon-vehicles" width="100" height="100"/>
+    </resources>
 </document>
