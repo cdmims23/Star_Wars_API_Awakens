@@ -26,7 +26,7 @@
                                 <rect key="frame" x="110" y="28" width="154" height="100"/>
                                 <state key="normal" image="icon-characters-2"/>
                                 <connections>
-                                    <segue destination="9xI-k4-XVb" kind="show" identifier="showInfo" id="ty9-V3-VEN"/>
+                                    <segue destination="9xI-k4-XVb" kind="show" identifier="showInfo" id="8ov-Cn-28a"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7A-Tn-ly7">
