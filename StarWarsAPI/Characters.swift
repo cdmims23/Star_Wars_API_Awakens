@@ -8,18 +8,28 @@
 
 import Foundation
 
-class Characters {
+class Characters: StarWars {
     let name: String
     let birth_year: String
     let height: String
     let eye_color: String
     let hair_color: String
     
-    init(name: String, birth_year: String, height: String, eye_color: String, hair_color: String) {
-        self.name = name
-        self.birth_year = birth_year
-        self.height = height
-        self.eye_color = eye_color
-        self.hair_color = hair_color
+    // Protocol Stored Properties
+    let manufacturer = ""
+    let cost = ""
+    let length = ""
+    let crew = ""
+    let vehicle_class = ""
+    let starship_class = ""
+    let num_properties: Int = 5
+    
+    init(dict: [String : AnyObject]) {
+        self.name = dict["name"] as! String
+        self.birth_year = dict["birth_year"] as! String
+        self.height = dict["height"] as! String
+        self.eye_color = dict["eye_color"] as! String
+        self.hair_color = dict["hair_color"] as! String
     }
 }
+
